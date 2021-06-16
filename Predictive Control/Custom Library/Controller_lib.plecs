@@ -47,9 +47,9 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [1230, 817; 1901, 1036]
+    Location      [1289, 34; 1901, 1036]
     ZoomFactor    1
-    SliderPosition [0, 232]
+    SliderPosition [0, 29]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -2507,6 +2507,919 @@ Plecs {
           SrcTerminal   4
           Points        [300, 140; 300, 165]
           DstComponent  "iL*"
+          DstTerminal   1
+        }
+      }
+    }
+    Component {
+      Type          Subsystem
+      Name          "Microcontroller"
+      Show          on
+      Position      [320, 135]
+      Direction     up
+      Flipped       off
+      Frame         [-55, -75; 55, 75]
+      LabelPosition [0, 78]
+      LabelAlign    up
+      SampleTime    "-1"
+      CodeGenDiscretizationMethod "2"
+      CodeGenTarget "Generic"
+      MaskType      "Microcontroller C-Script for a 2KW PV Array with a 48V ba"
+"ckup Battery"
+      MaskDescription "This is a C-Script to control a 2KW PV Array with a 48V"
+" backup Battery, \n"
+"is divided in two section, one section for the PV Array and the second one fo"
+"r the backup battery. \n"
+"Each section contain a cascade control setup:  a PI to control the voltage lo"
+"op, and a Predictive Controller for the inner inductor current loop. "
+      MaskDisplay   "Icon:image({-35,35}, {-35,35}, 'a.png')"
+      MaskDisplayLang "2"
+      MaskIconFrame on
+      MaskIconOpaque off
+      MaskIconRotates on
+      Parameter {
+        Variable      "ts"
+        Prompt        "Sample Time"
+        Type          FreeText
+        Value         "1/(50e3*100)"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "Kp_p"
+        Prompt        "Proportional gain(Kp) PV"
+        Type          FreeText
+        Value         "-0.032"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "Ki_p"
+        Prompt        "Integral gain (Ki) PV "
+        Type          FreeText
+        Value         "-230"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "umax_p"
+        Prompt        "Maximun output PV"
+        Type          FreeText
+        Value         "12"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "umin_p"
+        Prompt        "Minimun output PV"
+        Type          FreeText
+        Value         "0"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "L_p"
+        Prompt        "PV Array Boost Inductance"
+        Type          FreeText
+        Value         "2.50e-3"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "Kp_b"
+        Prompt        "Proportional gain(Kp) Battery"
+        Type          FreeText
+        Value         "-0.37"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "Ki_b"
+        Prompt        "Integral gain (Ki) Battery"
+        Type          FreeText
+        Value         "-37"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "umax_b"
+        Prompt        "Maximun output Battery "
+        Type          FreeText
+        Value         "42"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "umin_b"
+        Prompt        "Minimun output Battery"
+        Type          FreeText
+        Value         "-42"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Parameter {
+        Variable      "L_b"
+        Prompt        "Battery Boost Inductance"
+        Type          FreeText
+        Value         "10e-3"
+        Show          off
+        Tunable       on
+        TabName       ""
+      }
+      Terminal {
+        Type          Output
+        Position      [59, 20]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [59, 35]
+        Direction     right
+      }
+      Terminal {
+        Type          Input
+        Position      [-55, 65]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [-55, 50]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [-55, 35]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [-55, 20]
+        Direction     left
+      }
+      Terminal {
+        Type          Output
+        Position      [59, 50]
+        Direction     right
+      }
+      Terminal {
+        Type          Input
+        Position      [-55, -35]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [-55, -50]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [-55, -65]
+        Direction     left
+      }
+      Terminal {
+        Type          Output
+        Position      [59, -65]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [59, -50]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [59, -35]
+        Direction     right
+      }
+      Schematic {
+        Location      [1289, 556; 1901, 1035]
+        ZoomFactor    1.49863
+        SliderPosition [0, 0]
+        ShowBrowser   off
+        BrowserWidth  100
+        Component {
+          Type          CScript
+          Name          "C-Script"
+          Show          on
+          Position      [230, 130]
+          Direction     up
+          Flipped       off
+          Parameter {
+            Variable      "DialogGeometry"
+            Value         "[1293 732 614 335]"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumInputs"
+            Value         "7"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumOutputs"
+            Value         "6"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumContStates"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumDiscStates"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "NumZCSignals"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "DirectFeedthrough"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ts"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "Parameters"
+            Value         "ts, Kp_p, Ki_p, umax_p, umin_p, L_p, Kp_b, Ki_b, um"
+"ax_b, umin_b, L_b"
+            Show          off
+          }
+          Parameter {
+            Variable      "LangStandard"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "GnuExtensions"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "RuntimeCheck"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Declarations"
+            Value         "\n"
+"//------- DECLARATION-------------------------------------------\n"
+"\n"
+"#include <float.h>\n"
+"#include <math.h> \n"
+"#include <stdio.h>\n"
+"\n"
+"\n"
+"\n"
+"#define vp_ref      Input(0)  // Vp*\n"
+"#define vp \t  \t\t Input(1)  // Vp\n"
+"#define iL \t  \t\t Input(2)  // iL\n"
+"\n"
+"\n"
+"#define vc_ref      Input(3)  // Vc*\n"
+"#define vc \t  \t\t Input(4)  // Vc\n"
+"#define ib \t  \t\t Input(5)  // ib\n"
+"#define vb     \t\t Input(6)  // vB\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"//--- pv Array input parameter -------------------\n"
+"\n"
+"\n"
+"// Define the user parameter for the PI Controller\n"
+"#define ts     ParamRealData(0,0) \t// Same sample rate for both cascade cont"
+"rollers\n"
+"#define Kp_p   ParamRealData(1,0)\n"
+"#define Ki_p   ParamRealData(2,0)\n"
+"\n"
+"\n"
+"// Define the user parameter for the Anti-windup\n"
+"#define umax_p ParamRealData(3,0)\n"
+"#define umin_p ParamRealData(4,0)\n"
+"\n"
+"\n"
+"#define L_p    ParamRealData(5,0)\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"//--- Battery input parameter -------------------\n"
+"\n"
+"// Define the user parameter for the PI Controller\n"
+"#define Kp_b   ParamRealData(6,0)\n"
+"#define Ki_b   ParamRealData(7,0)\n"
+"\n"
+"// Define the user parameter for the Anti-windup\n"
+"#define umax_b ParamRealData(8,0)\n"
+"#define umin_b ParamRealData(9,0)\n"
+"\n"
+"\n"
+"#define L_b    ParamRealData(10,0)\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"// Funtion cost declaration,\n"
+"#define k1_p ts/L_p\n"
+"#define k2_p -ts/L_p\n"
+"#define u0_p 0\n"
+"#define u1_p 1\n"
+"\n"
+"\n"
+"#define k1_b ts/L_b\n"
+"#define k2_b -ts/L_b\n"
+"#define u0_b 0\n"
+"#define u1_b 1\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"//  PI controllers variables declaration, PV and Battery  \n"
+"\n"
+"double up_p, ui_p, ui1_p = 0, e_p=0, e1_p=0, iL_p_ref;\n"
+"\n"
+"double up_b, ui_b, ui1_b = 0, e_b=0, e1_b=0, iL_b_ref;\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"// Predictive controller variables declaration, S1 for PV, S2 for Battery\n"
+"float s1;             \n"
+"float J_p0,J_p1,J_p;\n"
+"\n"
+"\n"
+"float s2;             \n"
+"float J_b0,J_b1,J_b;\n"
+            Show          off
+          }
+          Parameter {
+            Variable      "StartFcn"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "OutputFcn"
+            Value         "//------- MICROCONTROLLER OUTPUTS------------------"
+"-------------------------\n"
+"\n"
+"\n"
+"//  PI ouput  PV ARRAY\n"
+"\n"
+"e_p = vp_ref - vp;  \t\t\t\t\t\t     // error signal\n"
+"\n"
+"up_p = Kp_p*e_p;  \t\t\t\t\t\t     // proportional action\n"
+"ui_p = ts*Ki_p*(e_p+e1_p) *0.5 + ui1_p;  // integral action \n"
+"\n"
+"iL_p_ref = up_p + ui_p + u0_p;           // iL_ref is the ouput of the PI, se"
+"t de reference current for the predictive control\n"
+"\n"
+"\n"
+"\n"
+"// Anti-windup\n"
+"// This condition make sure that the integral action control don't act if the"
+" inductor reach the saturation point\n"
+"if(iL_p_ref > umax_p){\n"
+"\t\n"
+"    iL_p_ref = umax_p;\n"
+"    \n"
+"} else if(iL_p_ref < umin_p){\n"
+"\t\n"
+"    iL_p_ref = umin_p;\n"
+"\n"
+"} else{\n"
+"\t\n"
+"\te1_p=e_p;\n"
+"\tui1_p = ui_p;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"//  PI Battery ouput \n"
+"\n"
+"e_b = vc_ref - vc;  \t\t\t\t\t\t     // error signal\n"
+"\n"
+"up_b = Kp_b*e_b;  \t\t\t\t\t\t     // proportional action\n"
+"ui_b = ts*Ki_b*(e_b+e1_b) *0.5 + ui1_b;  // integral action \n"
+"\n"
+"iL_b_ref = up_b + ui_b + u0_b;           // iL_ref is the ouput of the PI, se"
+"t de reference current for the predictive control\n"
+"\n"
+"\n"
+"\n"
+"// Anti-windup\n"
+"// This condition make sure that the integral action control don't act if the"
+" inductor reach the saturation point\n"
+"if(iL_b_ref > umax_b){\n"
+"\t\n"
+"    iL_b_ref = umax_b;\n"
+"    \n"
+"} else if(iL_b_ref < umin_b){\n"
+"\t\n"
+"    iL_b_ref = umin_b;\n"
+"\n"
+"} else{\n"
+"\t\n"
+"\te1_b=e_b;\n"
+"\tui1_b = ui_b;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"//---- MiCROCONTROLLER OUTPUTS, s1 for PV Array and s2 for Battery \n"
+"\n"
+"Output(0) = s1;\n"
+"Output(1) = J_p;\n"
+"Output(2) = iL_p_ref;  \t\t\t\t// output fot the reference current signal for"
+" measurment\n"
+"Output(3) = s2;\n"
+"Output(4) = J_b;\n"
+"Output(5) = iL_b_ref;  \t\t\t\t// output fot the reference current signal for"
+" measurment\n"
+"\n"
+"\n"
+            Show          off
+          }
+          Parameter {
+            Variable      "UpdateFcn"
+            Value         "\n"
+"//------- PREDICTIVE CONTROL SCRIPT------------------------------------------"
+"-\n"
+"\n"
+"\n"
+"// Predictive Control Script  pv array\n"
+"\n"
+"\n"
+"\n"
+"// Two posible output for the PV Array predictive controller, J_p1 if u(k) = "
+"1 and J_p0 if u(k)= 0 \n"
+"\n"
+"J_p1 = fabs(iL_p_ref - (k1_p*vp + k2_p*u1_p*vc + iL));\n"
+"J_p0 = fabs(iL_p_ref- (k1_p*vp + k2_p*u0_p*vc + iL));\n"
+"\n"
+"\n"
+"\n"
+"if( J_p1 < J_p0){\n"
+"\t\n"
+"\ts1 = u1_p;\n"
+"\tJ_p = J_p1;\n"
+"\n"
+"}\n"
+"else{\n"
+"\n"
+"\ts1 = u0_p;\n"
+"\tJ_p = J_p0;\n"
+"\t\n"
+"\t}\n"
+"\t\n"
+"\t\t\n"
+"\t\t\n"
+"\t\t\n"
+"// Two posible output for the Battery  predictive controller, J_b1 if u(k) = "
+"1 and J_b0 if u(k)= 0 \t\n"
+"J_b1 = fabs(iL_b_ref - (k1_b*u1_b*vc_ref + k2_b*vb + ib));\n"
+"J_b0 = fabs(iL_b_ref- (k1_b*u0_b*vc_ref + k2_b*vb + ib));\n"
+"\n"
+"\n"
+"\n"
+"if( J_b1 < J_b0){\n"
+"\t\n"
+"\ts2 = u1_b;\n"
+"\tJ_b = J_b1;\n"
+"\n"
+"}\n"
+"else{\n"
+"\n"
+"\ts2 = u0_b;\n"
+"\tJ_b = J_b0;\n"
+"\t\n"
+"\t}\t\n"
+"\n"
+"\n"
+"\n"
+"\n"
+            Show          off
+          }
+          Parameter {
+            Variable      "DerivativeFcn"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "TerminateFcn"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "StoreCustomStateFcn"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "RestoreCustomStateFcn"
+            Value         ""
+            Show          off
+          }
+        }
+        Component {
+          Type          SignalMux
+          Name          "Mux"
+          Show          off
+          Position      [170, 130]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Width"
+            Value         "7"
+            Show          off
+          }
+        }
+        Component {
+          Type          SignalDemux
+          Name          "Demux"
+          Show          off
+          Position      [290, 130]
+          Direction     right
+          Flipped       on
+          Parameter {
+            Variable      "Width"
+            Value         "6"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "S2"
+          Show          on
+          Position      [370, 155]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "1"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "J2"
+          Show          on
+          Position      [370, 185]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "vb"
+          Show          on
+          Position      [85, 240]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "3"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "ib"
+          Show          on
+          Position      [85, 205]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "4"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "vc"
+          Show          on
+          Position      [85, 170]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "5"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "vc*"
+          Show          on
+          Position      [85, 130]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "6"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "ib*"
+          Show          on
+          Position      [370, 220]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "7"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "iL"
+          Show          on
+          Position      [85, 90]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "8"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "vp"
+          Show          on
+          Position      [85, 55]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "9"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "vp*"
+          Show          on
+          Position      [85, 15]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "10"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "S1"
+          Show          on
+          Position      [370, 35]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "11"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "J1"
+          Show          on
+          Position      [370, 65]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "12"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "iL*"
+          Show          on
+          Position      [370, 100]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "13"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Mux"
+          SrcTerminal   1
+          DstComponent  "C-Script"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "C-Script"
+          SrcTerminal   2
+          DstComponent  "Demux"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "vp*"
+          SrcTerminal   1
+          Points        [135, 15; 135, 100]
+          DstComponent  "Mux"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "vp"
+          SrcTerminal   1
+          Points        [130, 55; 130, 110]
+          DstComponent  "Mux"
+          DstTerminal   3
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "iL"
+          SrcTerminal   1
+          Points        [125, 90; 125, 120]
+          DstComponent  "Mux"
+          DstTerminal   4
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "vc*"
+          SrcTerminal   1
+          DstComponent  "Mux"
+          DstTerminal   5
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "vc"
+          SrcTerminal   1
+          Points        [125, 170; 125, 140]
+          DstComponent  "Mux"
+          DstTerminal   6
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "ib"
+          SrcTerminal   1
+          Points        [130, 205; 130, 150]
+          DstComponent  "Mux"
+          DstTerminal   7
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "vb"
+          SrcTerminal   1
+          Points        [135, 240; 135, 160]
+          DstComponent  "Mux"
+          DstTerminal   8
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux"
+          SrcTerminal   2
+          Points        [315, 105; 315, 35]
+          DstComponent  "S1"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux"
+          SrcTerminal   3
+          Points        [320, 115; 320, 65]
+          DstComponent  "J1"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux"
+          SrcTerminal   4
+          Points        [325, 125; 325, 100]
+          DstComponent  "iL*"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux"
+          SrcTerminal   5
+          Points        [325, 135; 325, 155]
+          DstComponent  "S2"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux"
+          SrcTerminal   6
+          Points        [320, 145; 320, 185]
+          DstComponent  "J2"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Demux"
+          SrcTerminal   7
+          Points        [315, 155; 315, 220]
+          DstComponent  "ib*"
           DstTerminal   1
         }
       }
