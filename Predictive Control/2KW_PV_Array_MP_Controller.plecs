@@ -1,5 +1,5 @@
 Plecs {
-  Name          "SupaControlador"
+  Name          "2KW_PV_Array_MP_Controller"
   Version       "4.5"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
@@ -122,9 +122,9 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [12, 34; 1275, 1036]
-    ZoomFactor    1
-    SliderPosition [430, 266]
+    Location      [12, 34; 1044, 1036]
+    ZoomFactor    1.14437
+    SliderPosition [-1, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -989,7 +989,7 @@ Plecs {
       Type          Goto
       Name          "Goto6"
       Show          off
-      Position      [240, 410]
+      Position      [255, 410]
       Direction     right
       Flipped       off
       Parameter {
@@ -1023,17 +1023,17 @@ Plecs {
       Position      [685, 595]
       Direction     up
       Flipped       off
-      Location      [1289, 817; 1901, 1064]
+      Location      [1058, 556; 1901, 803]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC1AAAD6/wCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAFkA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMAAAAAHwAAA+sAAABjAP///wAAAAMAAAOGAAAAkPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAA4YAAABEAP///wAAAmYAAADZAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAA4YAAABEAP///wAAA04AAADZAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
-"QAAAGQAAAADAAAAZAAAAAIAAABkAAAABQAAAGQAAAAEAAAAZAAAAAcAAABkAAAABgAAAGQAAAAJAA"
-"AAZAAAAAgAAABkAAAA2AAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAADNAAA"
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAC"
+"QAAAGQAAAAIAAAAZAAAAAcAAABkAAAABgAAAGQAAAAFAAAAZAAAAAQAAABkAAAAAwAAAGQAAAACAA"
+"AAZAAAAAEAAABkAAAA2AAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAADNAAA"
 "AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
 "AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
 "AALAAAAAQAAAAAAAAPoAAAAAAs="
@@ -1043,7 +1043,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    ""
@@ -1161,18 +1161,18 @@ Plecs {
       Position      [685, 515]
       Direction     up
       Flipped       off
-      Location      [1289, 34; 1901, 368]
+      Location      [1058, 295; 1901, 542]
       State         "AAAA/wAAAAD9AAAAAQAAAAEAAAC0AAABgvwCAAAAA/sAAAASAFQAaQBtA"
 "GUAUgBhAG4AZwBlAAAAAAAAAAGCAAAARQD////7AAAAEABaAG8AbwBtAEEAcgBlAGEAAAAAAP////"
-"8AAAAxAP////sAAAAUAFMAYQB2AGUAZABWAGkAZQB3AHMAAAAAAP////8AAABjAP///wAAAmYAAAE"
-"wAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8A"
+"8AAAAxAP////sAAAAUAFMAYQB2AGUAZABWAGkAZQB3AHMAAAAAAP////8AAABjAP///wAAA04AAAD"
+"ZAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8A"
 "AAAAAAAAAA=="
       SavedViews    "AAAAAgAAAAA="
       HeaderState   ""
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       TimeRange     "0.0"
       ShownPeriods  "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Voltage (V)"
@@ -1221,7 +1221,7 @@ Plecs {
       Type          Subsystem
       Name          "MPPT"
       Show          on
-      Position      [185, 420]
+      Position      [200, 420]
       Direction     up
       Flipped       off
       Frame         [-25, -10; 25, 10]
@@ -2122,7 +2122,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux6"
       Show          off
-      Position      [140, 420]
+      Position      [155, 420]
       Direction     right
       Flipped       off
       Parameter {
@@ -2135,7 +2135,7 @@ Plecs {
       Type          From
       Name          "From33"
       Show          off
-      Position      [115, 430]
+      Position      [130, 430]
       Direction     right
       Flipped       off
       Parameter {
@@ -2153,7 +2153,7 @@ Plecs {
       Type          From
       Name          "From32"
       Show          off
-      Position      [115, 410]
+      Position      [130, 410]
       Direction     right
       Flipped       off
       Parameter {
@@ -2174,17 +2174,17 @@ Plecs {
       Position      [685, 685]
       Direction     up
       Flipped       off
-      Location      [1289, 452; 1901, 646]
+      Location      [1058, 730; 1901, 1064]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC1AAAApPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAIEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMAAAAAHwAAAKQAAABjAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAAmYAAACkAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAA04AAAEwAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
-"QAAAGQAAAADAAAAZAAAAAIAAABkAAAABQAAAGQAAAAEAAAAZAAAAAcAAABkAAAABgAAAGQAAAAJAA"
-"AAZAAAAAgAAABkAAAA2AAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAADNAAA"
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAC"
+"QAAAGQAAAAIAAAAZAAAAAcAAABkAAAABgAAAGQAAAAFAAAAZAAAAAQAAABkAAAAAwAAAGQAAAACAA"
+"AAZAAAAAEAAABkAAAA2AAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAADNAAA"
 "AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
 "AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
 "AALAAAAAQAAAAAAAAPoAAAAAAs="
@@ -2379,17 +2379,17 @@ Plecs {
       Position      [955, 525]
       Direction     up
       Flipped       off
-      Location      [1289, 556; 1901, 803]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC1AAABMfwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [1058, 34; 1901, 281]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC1AAAA2fwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAFkA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAQYAA"
-"ABoAAAAMgAAACO+wAAAAwAVAByAGEAYwBlAHMAAAAAHwAAATEAAABjAP///wAAAAMAAAPoAAAAlvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAA+gAAABEAP///wAAAmYAAADZAAAA"
+"ABoAAAAMgAAACO+wAAAAwAVAByAGEAYwBlAHMBAAAAHwAAANkAAABjAP///wAAAAMAAAPoAAAAlvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAA+gAAABEAP///wAAApMAAADZAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
-"QAAAGQAAAADAAAAZAAAAAIAAABkAAAABQAAAGQAAAAEAAAAZAAAAAcAAABkAAAABgAAAGQAAAAJAA"
-"AAZAAAAAgAAABkAAAA2AAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAADNAAA"
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAC"
+"QAAAGQAAAAIAAAAZAAAAAcAAABkAAAABgAAAGQAAAAFAAAAZAAAAAQAAABkAAAAAwAAAGQAAAACAA"
+"AAZAAAAAEAAABkAAAA2AAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAADNAAA"
 "AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
 "AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
 "AALAAAAAQAAAAAAAAPoAAAAAAs="
@@ -2502,17 +2502,17 @@ Plecs {
       Position      [955, 645]
       Direction     up
       Flipped       off
-      Location      [1289, 295; 1901, 542]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC1AAAApPwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [1058, 556; 1901, 803]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC1AAAA2fwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAIEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMAAAAAHwAAAKQAAABjAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAAmYAAADZAAAA"
+"///wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMBAAAAHwAAANkAAABjAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAApMAAADZAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
-"QAAAGQAAAADAAAAZAAAAAIAAABkAAAABQAAAGQAAAAEAAAAZAAAAAcAAABkAAAABgAAAGQAAAAJAA"
-"AAZAAAAAgAAABkAAAA2AAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAADNAAA"
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAC"
+"QAAAGQAAAAIAAAAZAAAAAcAAABkAAAABgAAAGQAAAAFAAAAZAAAAAQAAABkAAAAAwAAAGQAAAACAA"
+"AAZAAAAAEAAABkAAAA0AAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAADFAAA"
 "AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
 "AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
 "AALAAAAAQAAAAAAAAPoAAAAAAs="
@@ -2523,7 +2523,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    ""
@@ -2673,7 +2673,7 @@ Plecs {
       Type          Constant
       Name          "Set Point"
       Show          on
-      Position      [165, 505]
+      Position      [180, 505]
       Direction     right
       Flipped       off
       Frame         [-20, -10; 20, 10]
@@ -2694,7 +2694,7 @@ Plecs {
       Type          From
       Name          "From18"
       Show          off
-      Position      [240, 520]
+      Position      [255, 520]
       Direction     right
       Flipped       off
       Parameter {
@@ -2712,7 +2712,7 @@ Plecs {
       Type          From
       Name          "From25"
       Show          off
-      Position      [240, 535]
+      Position      [255, 535]
       Direction     right
       Flipped       off
       Parameter {
@@ -2730,7 +2730,7 @@ Plecs {
       Type          From
       Name          "From3"
       Show          off
-      Position      [240, 550]
+      Position      [255, 550]
       Direction     right
       Flipped       off
       Parameter {
@@ -2748,7 +2748,7 @@ Plecs {
       Type          Goto
       Name          "Goto16"
       Show          off
-      Position      [440, 505]
+      Position      [435, 535]
       Direction     right
       Flipped       off
       Parameter {
@@ -2766,7 +2766,7 @@ Plecs {
       Type          Goto
       Name          "Goto17"
       Show          off
-      Position      [440, 520]
+      Position      [435, 550]
       Direction     right
       Flipped       off
       Parameter {
@@ -2784,7 +2784,7 @@ Plecs {
       Type          Goto
       Name          "Goto9"
       Show          off
-      Position      [240, 495]
+      Position      [255, 495]
       Direction     right
       Flipped       off
       Parameter {
@@ -2838,7 +2838,7 @@ Plecs {
       Type          Goto
       Name          "Goto18"
       Show          off
-      Position      [440, 535]
+      Position      [435, 565]
       Direction     right
       Flipped       off
       Parameter {
@@ -2859,17 +2859,17 @@ Plecs {
       Position      [915, 250]
       Direction     up
       Flipped       off
-      Location      [1289, 34; 1901, 542]
+      Location      [1058, 817; 1901, 1064]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABjAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAAmYAAAHfAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAA04AAADZAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAA"
-"QAAAGQAAAADAAAAZAAAAAIAAABkAAAABQAAAGQAAAAEAAAAZAAAAAcAAABkAAAABgAAAGQAAAAJAA"
-"AAZAAAAAgAAABkAAAAmAAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAACNAAA"
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAC"
+"QAAAGQAAAAIAAAAZAAAAAcAAABkAAAABgAAAGQAAAAFAAAAZAAAAAQAAABkAAAAAwAAAGQAAAACAA"
+"AAZAAAAAEAAABkAAAAmAAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAACNAAA"
 "AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
 "AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
 "AALAAAAAQAAAAAAAAPoAAAAAAs="
@@ -2878,7 +2878,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    ""
@@ -3104,7 +3104,7 @@ Plecs {
       }
       Parameter {
         Variable      "XFinal"
-        Value         "26.3"
+        Value         "26.2"
         Show          off
       }
       Terminal {
@@ -3117,7 +3117,7 @@ Plecs {
       Type          From
       Name          "From26"
       Show          off
-      Position      [240, 435]
+      Position      [255, 435]
       Direction     right
       Flipped       off
       Parameter {
@@ -3135,7 +3135,7 @@ Plecs {
       Type          From
       Name          "From27"
       Show          off
-      Position      [240, 450]
+      Position      [255, 450]
       Direction     right
       Flipped       off
       Parameter {
@@ -3153,7 +3153,7 @@ Plecs {
       Type          Goto
       Name          "Goto12"
       Show          off
-      Position      [440, 420]
+      Position      [435, 420]
       Direction     right
       Flipped       off
       Parameter {
@@ -3171,7 +3171,7 @@ Plecs {
       Type          Goto
       Name          "Goto13"
       Show          off
-      Position      [440, 435]
+      Position      [435, 435]
       Direction     right
       Flipped       off
       Parameter {
@@ -3189,7 +3189,7 @@ Plecs {
       Type          Goto
       Name          "Goto15"
       Show          off
-      Position      [440, 450]
+      Position      [435, 450]
       Direction     right
       Flipped       off
       Parameter {
@@ -3248,19 +3248,81 @@ Plecs {
       }
     }
     Component {
+      Type          From
+      Name          "From28"
+      Show          off
+      Position      [255, 465]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "iP"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From29"
+      Show          off
+      Position      [255, 565]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "iR"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto2"
+      Show          off
+      Position      [820, 75]
+      Direction     left
+      Flipped       on
+      Parameter {
+        Variable      "Tag"
+        Value         "iR"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Ammeter
+      Name          "Am4"
+      Show          off
+      Position      [795, 95]
+      Direction     left
+      Flipped       off
+    }
+    Component {
       Type          Reference
-      SrcComponent  "Controller_lib/Microcontroller"
+      SrcComponent  "Controller_lib/Microcontroller1"
       Name          "Microcontroller"
       Show          on
-      Position      [350, 485]
+      Position      [345, 500]
       Direction     up
       Flipped       off
-      Frame         [-55, -75; 55, 75]
-      LabelPosition [0, 78]
+      Frame         [-55, -90; 55, 90]
+      LabelPosition [0, 93]
       LabelAlign    up
       Parameter {
         Variable      "ts"
-        Value         "1/(50e3*100)"
+        Value         "1/(50e3*300)"
         Show          off
       }
       Parameter {
@@ -3315,18 +3377,13 @@ Plecs {
       }
       Terminal {
         Type          Output
-        Position      [59, 20]
-        Direction     right
-      }
-      Terminal {
-        Type          Output
         Position      [59, 35]
         Direction     right
       }
       Terminal {
-        Type          Input
-        Position      [-55, 65]
-        Direction     left
+        Type          Output
+        Position      [59, 50]
+        Direction     right
       }
       Terminal {
         Type          Input
@@ -3344,14 +3401,14 @@ Plecs {
         Direction     left
       }
       Terminal {
-        Type          Output
-        Position      [59, 50]
-        Direction     right
+        Type          Input
+        Position      [-55, 5]
+        Direction     left
       }
       Terminal {
-        Type          Input
-        Position      [-55, -35]
-        Direction     left
+        Type          Output
+        Position      [59, 65]
+        Direction     right
       }
       Terminal {
         Type          Input
@@ -3364,6 +3421,16 @@ Plecs {
         Direction     left
       }
       Terminal {
+        Type          Input
+        Position      [-55, -80]
+        Direction     left
+      }
+      Terminal {
+        Type          Output
+        Position      [59, -80]
+        Direction     right
+      }
+      Terminal {
         Type          Output
         Position      [59, -65]
         Direction     right
@@ -3374,9 +3441,14 @@ Plecs {
         Direction     right
       }
       Terminal {
-        Type          Output
-        Position      [59, -35]
-        Direction     right
+        Type          Input
+        Position      [-55, 65]
+        Direction     left
+      }
+      Terminal {
+        Type          Input
+        Position      [-55, -35]
+        Direction     left
       }
     }
     Connection {
@@ -3600,8 +3672,7 @@ Plecs {
       Branch {
         Points        [755, 95]
         Branch {
-          Points        [845, 95]
-          DstComponent  "RL"
+          DstComponent  "Am4"
           DstTerminal   1
         }
         Branch {
@@ -3692,7 +3763,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From32"
       SrcTerminal   1
-      Points        [125, 410]
+      Points        [140, 410]
       DstComponent  "Mux6"
       DstTerminal   2
     }
@@ -3850,7 +3921,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From33"
       SrcTerminal   1
-      Points        [125, 430]
+      Points        [140, 430]
       DstComponent  "Mux6"
       DstTerminal   3
     }
@@ -3873,27 +3944,6 @@ Plecs {
       SrcComponent  "Microcontroller"
       SrcTerminal   13
       DstComponent  "Goto15"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Microcontroller"
-      SrcTerminal   1
-      DstComponent  "Goto16"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Microcontroller"
-      SrcTerminal   2
-      DstComponent  "Goto17"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Microcontroller"
-      SrcTerminal   7
-      DstComponent  "Goto18"
       DstTerminal   1
     }
     Connection {
@@ -3951,9 +4001,9 @@ Plecs {
       Type          Signal
       SrcComponent  "Set Point"
       SrcTerminal   1
-      Points        [210, 505]
+      Points        [225, 505]
       Branch {
-        Points        [210, 495]
+        Points        [225, 495]
         DstComponent  "Goto9"
         DstTerminal   1
       }
@@ -3966,7 +4016,7 @@ Plecs {
       Type          Signal
       SrcComponent  "MPPT"
       SrcTerminal   1
-      Points        [220, 420]
+      Points        [235, 420]
       Branch {
         DstComponent  "Goto6"
         DstTerminal   1
@@ -4005,6 +4055,57 @@ Plecs {
       DstComponent  "IGBTD2"
       DstTerminal   3
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "From28"
+      SrcTerminal   1
+      DstComponent  "Microcontroller"
+      DstTerminal   15
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From29"
+      SrcTerminal   1
+      DstComponent  "Microcontroller"
+      DstTerminal   14
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Am4"
+      SrcTerminal   2
+      Points        [845, 95]
+      DstComponent  "RL"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Am4"
+      SrcTerminal   3
+      Points        [795, 75]
+      DstComponent  "Goto2"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Microcontroller"
+      SrcTerminal   1
+      DstComponent  "Goto16"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Microcontroller"
+      SrcTerminal   2
+      DstComponent  "Goto17"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Microcontroller"
+      SrcTerminal   7
+      DstComponent  "Goto18"
+      DstTerminal   1
+    }
     Annotation {
       Name          "before = 1\nafter = 0.8"
       Position      [135, 215]
@@ -4039,12 +4140,12 @@ Plecs {
       Position      [920, 490]
     } 
     Annotation {
-      Name          base64 "YmVmb3JlID0gMjXCsEMKYWZ0ZXIgPSAyNC42wrBD"
+      Name          base64 "YmVmb3JlID0gMjfCsEMKYWZ0ZXIgPSAyNi4ywrBD"
       Position      [135, 305]
     } 
   }
   ProbeBlock {
-    Tag           "SupaControlador/PV V, P"
+    Tag           "2KW_PV_Array_MP_Controller/PV V, P"
     Probe {
       Component     "PV"
       Path          ""
